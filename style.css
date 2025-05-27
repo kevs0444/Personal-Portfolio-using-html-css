@@ -1,88 +1,97 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navigation styles */
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Particles background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Navigation Bar */
 nav {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: top 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-nav h1 {
-    margin: 0;
+nav a {
+  color: #4caf50;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+  color: #2e7d32;
 }
 
 /* Sections */
-section {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
 }
 
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
+/* Section Text Styling */
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
 }
 
-.project {
-    margin-bottom: 1rem;
+.section h1 span {
+  color: #4caf50;
 }
 
-.project h3 {
-    margin: 0.5rem 0;
+.section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
-.project a {
-    color: #007bff;
-    text-decoration: none;
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  background: transparent;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
-.project a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }
+.btn:hover {
+  background-color: #4caf50;
+  color: #ffffff;
 }

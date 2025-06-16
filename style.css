@@ -44,3 +44,16 @@ header#home {
 section {
   padding: 20px;
 }
+.section-headings {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.intro {
+  background-color: #ecf0f1;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+img {
+  max-width: 200px;
+  border-radius: 10px;
+}
